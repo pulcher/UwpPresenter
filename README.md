@@ -1,3 +1,3 @@
 # UwpPresenter
 
-Present your app on almost any device!
+Do your presentation on almost any device!
