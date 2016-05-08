@@ -8,6 +8,15 @@
     mc:Ignorable="d">
 
     <Grid Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
-
+        <FlipView x:Name="flipView" HorizontalAlignment="Left" Margin="74,52,0,0"
+                  VerticalAlignment="Top" Width="1130" Height="615">
+            <FlipView.ItemTemplate>
+                <DataTemplate>
+                    <Grid>
+                        <Image Stretch="Fill" Source="{Binding}" />
+                    </Grid>
+                </DataTemplate>
+            </FlipView.ItemTemplate>
+        </FlipView>
     </Grid>
 </Page>

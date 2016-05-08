@@ -1,10 +1,10 @@
-<?xml version="1.0" encoding="utf-8"?>
+﻿<?xml version="1.0" encoding="utf-8"?>
 <Project ToolsVersion="14.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
   <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">x86</Platform>
-    <ProjectGuid>{d3005da8-c468-4c6b-afa3-96032ea2a9ea}</ProjectGuid>
+    <ProjectGuid>{D3005DA8-C468-4C6B-AFA3-96032EA2A9EA}</ProjectGuid>
     <OutputType>AppContainerExe</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
     <RootNamespace>UwpPresenter</RootNamespace>
@@ -16,9 +16,7 @@
     <MinimumVisualStudioVersion>14</MinimumVisualStudioVersion>
     <FileAlignment>512</FileAlignment>
     <ProjectTypeGuids>{A5A43C5B-DE2A-4C0C-9213-0A381AF9435A};{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}</ProjectTypeGuids>
-    
     <PackageCertificateKeyFile>UwpPresenter_TemporaryKey.pfx</PackageCertificateKeyFile>
-    
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Debug|x86'">
     <DebugSymbols>true</DebugSymbols>
@@ -106,11 +104,26 @@
     <AppxManifest Include="Package.appxmanifest">
       <SubType>Designer</SubType>
     </AppxManifest>
-    
     <None Include="UwpPresenter_TemporaryKey.pfx" />
-    
   </ItemGroup>
   <ItemGroup>
+    <Content Include="Assets\IotHubTalk\iotHubTalk-png.001.png" />
+    <Content Include="Assets\IotHubTalk\iotHubTalk-png.002.png" />
+    <Content Include="Assets\IotHubTalk\iotHubTalk-png.003.png" />
+    <Content Include="Assets\IotHubTalk\iotHubTalk-png.004.png" />
+    <Content Include="Assets\IotHubTalk\iotHubTalk-png.005.png" />
+    <Content Include="Assets\IotHubTalk\iotHubTalk-png.006.png" />
+    <Content Include="Assets\IotHubTalk\iotHubTalk-png.007.png" />
+    <Content Include="Assets\IotHubTalk\iotHubTalk-png.008.png" />
+    <Content Include="Assets\IotHubTalk\iotHubTalk-png.009.png" />
+    <Content Include="Assets\IotHubTalk\iotHubTalk-png.010.png" />
+    <Content Include="Assets\IotHubTalk\iotHubTalk-png.011.png" />
+    <Content Include="Assets\IotHubTalk\iotHubTalk-png.012.png" />
+    <Content Include="Assets\IotHubTalk\iotHubTalk-png.013.png" />
+    <Content Include="Assets\IotHubTalk\iotHubTalk-png.014.png" />
+    <Content Include="Assets\IotHubTalk\iotHubTalk-png.015.png" />
+    <Content Include="Assets\IotHubTalk\iotHubTalk-png.016.png" />
+    <Content Include="Assets\IotHubTalk\iotHubTalk-png.017.png" />
     <Content Include="Properties\Default.rd.xml" />
     <Content Include="Assets\LockScreenLogo.scale-200.png" />
     <Content Include="Assets\SplashScreen.scale-200.png" />
@@ -130,11 +143,9 @@
       <SubType>Designer</SubType>
     </Page>
   </ItemGroup>
-  
   <PropertyGroup Condition=" '$(VisualStudioVersion)' == '' or '$(VisualStudioVersion)' &lt; '14.0' ">
     <VisualStudioVersion>14.0</VisualStudioVersion>
   </PropertyGroup>
-
   <Import Project="$(MSBuildExtensionsPath)\Microsoft\WindowsXaml\v$(VisualStudioVersion)\Microsoft.Windows.UI.Xaml.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
        Other similar extension points exist, see Microsoft.Common.targets.
