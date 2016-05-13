@@ -27,22 +27,7 @@ namespace UwpPresenter
         {
             this.InitializeComponent();
 
-            var imageList = new List<string>();
-
             GetFiles();
-
-            imageList.Add(@"Assets/IotHubTalk/iotHubTalk-png.001.png");
-            imageList.Add(@"Assets/IotHubTalk/iotHubTalk-png.002.png");
-
-            //flipView.Items.Add("Assets/IotHubTalk/iotHubTalk-png.001.png");
-            //flipView.Items.Add("Assets/IotHubTalk/iotHubTalk-png.002.png");
-
-            //foreach (var item in imageList)
-            //{
-            //    var uri = new Uri(string.Format(@"ms-appx:/{0}", item));
-            //    var img = new BitmapImage(uri);
-            //    flipView.Items.Add(img);
-            //}
         }
 
         private async System.Threading.Tasks.Task GetFiles()
@@ -55,21 +40,15 @@ namespace UwpPresenter
             var imageList = new List<BitmapImage>();
             foreach (var item in files)
             {
-                var file = item.Name;
-                var path = item.Path;
-
-                //var uri = new Uri(string.Format(@"ms-appx:/Assests/IotHubTalk/{0}", file));
-                //var img = new BitmapImage(uri);
-
                 using(var fileStream = await item.OpenReadAsync()){
                     var bitmapImage = new BitmapImage();
                     bitmapImage.SetSource(fileStream);
                     imageList.Add(bitmapImage);
-                    //flipView.Items.Add(bitmapImage);
                 }
             }
 
             flipView.ItemsSource = imageList;
+            flipView.SelectedIndex = 5;
         }
 
         private void flipView_SelectionChanged(object sender, SelectionChangedEventArgs e)
