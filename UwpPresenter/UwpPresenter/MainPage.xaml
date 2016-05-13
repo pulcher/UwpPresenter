@@ -8,12 +8,28 @@
     mc:Ignorable="d">
 
     <RelativePanel Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
-        <FlipView x:Name="flipView" HorizontalAlignment="Left"
-                  VerticalAlignment="Top">
+        <FlipView x:Name="flipView" HorizontalAlignment="Left" BorderBrush="Azure" BorderThickness="3"
+                  RelativePanel.AlignTopWithPanel="True" >
             <FlipView.ItemTemplate>
                 <DataTemplate>
                     <Grid>
+                        <VariableSizedWrapGrid Orientation="Horizontal" Height="50" VerticalAlignment="Top">
+                            <TextBlock Text="stuff" Width="auto" Foreground="#FF0FF704">cooler stuff1</TextBlock>
+                            <TextBlock Text="stuff" Width="auto" Foreground="#FF0FF704">cooler stuff2</TextBlock>
+                            <TextBlock Text="stuff" Width="auto" Foreground="#FF0FF704">cooler stuff3</TextBlock>
+                            <TextBlock Text="stuff" Width="auto" Foreground="#FF0FF704">cooler stuff4</TextBlock>
+                            <TextBlock Text="stuff" Width="auto" Foreground="#FF0FF704">cooler stuff5</TextBlock>
+                            <TextBlock Text="stuff" Width="auto" Foreground="#FF0FF704">cooler stuff6</TextBlock>
+                        </VariableSizedWrapGrid>
                         <Image Source="{Binding}" />
+                        <VariableSizedWrapGrid Orientation="Horizontal" Height="50" VerticalAlignment="Bottom">
+                            <TextBlock Text="stuff" Width="auto" Foreground="#FFF113D3">other stuff1</TextBlock>
+                            <TextBlock Text="stuff" Width="auto" Foreground="#FFF113D3">other stuff2</TextBlock>
+                            <TextBlock Text="stuff" Width="auto" Foreground="#FFF113D3">other stuff3</TextBlock>
+                            <TextBlock Text="stuff" Width="auto" Foreground="#FFF113D3">other stuff4</TextBlock>
+                            <TextBlock Text="stuff" Width="auto" Foreground="#FFF113D3">other stuff5</TextBlock>
+                            <TextBlock Text="stuff" Width="auto">other stuff6</TextBlock>
+                        </VariableSizedWrapGrid>
                     </Grid>
                 </DataTemplate>
             </FlipView.ItemTemplate>
