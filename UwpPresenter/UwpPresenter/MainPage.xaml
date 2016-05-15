@@ -8,28 +8,24 @@
     mc:Ignorable="d"
     DataContext="{Binding Source={StaticResource Locator}, Path=Main}">
 
-    <Grid>
-        <VariableSizedWrapGrid x:Name="Info" Orientation="Horizontal" Height="50" VerticalAlignment="Bottom">
-            <TextBlock Text="{Binding SelectedPage}" Width="auto" Foreground="#FFF113D3"></TextBlock>
+    <RelativePanel>
+        <VariableSizedWrapGrid x:Name="InfoBlock" Orientation="Horizontal" Background="DeepPink">
+            <TextBlock x:Name="CurrentPage" Text="{Binding SelectedPage, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged}"/>
+
         </VariableSizedWrapGrid>
-        <RelativePanel Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
-            <FlipView x:Name="flipView" HorizontalAlignment="Left" BorderBrush="Azure" BorderThickness="3"
-                  SelectedIndex="{Binding SelectedPage, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged}"
-                   >
-                <FlipView.ItemTemplate>
-                    <DataTemplate>
-                        <Grid Height="70*">
-                            <Image Source="{Binding}" />
-                            <!--<VariableSizedWrapGrid Orientation="Horizontal" Height="50" VerticalAlignment="Top">
-                            <TextBlock Text="stuff1" Width="auto" Foreground="#FF0FF704"></TextBlock>
-                        </VariableSizedWrapGrid>
-                        <VariableSizedWrapGrid Orientation="Horizontal" Height="50" VerticalAlignment="Bottom">
-                            <TextBlock Text="{Binding SelectedPage}" Width="auto" Foreground="#FFF113D3"></TextBlock>
-                        </VariableSizedWrapGrid>-->
-                        </Grid>
-                    </DataTemplate>
-                </FlipView.ItemTemplate>
-            </FlipView>
-        </RelativePanel>
-    </Grid>
+        <FlipView x:Name="flipView"
+                      SelectedIndex="{Binding SelectedPage, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged}"
+                BorderBrush="Red" BorderThickness="5" RelativePanel.Below="InfoBlock">
+            <FlipView.ItemTemplate>
+                <DataTemplate>
+                    <Image Source="{Binding}"/>
+                </DataTemplate>
+            </FlipView.ItemTemplate>
+        </FlipView>
+        <VariableSizedWrapGrid x:Name="FunBlock" Orientation="Horizontal" Background="GreenYellow"
+                               FlowDirection="RightToLeft"
+                               RelativePanel.AlignRightWithPanel="True" RelativePanel.AlignTopWithPanel="True">
+            <TextBlock x:Name="CurrentDevice" Text="junk" VerticalAlignment="Top"/>
+        </VariableSizedWrapGrid>
+    </RelativePanel>
 </Page>
