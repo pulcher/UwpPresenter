@@ -7,7 +7,7 @@ using Assisticant.Fields;
 
 namespace UwpPresenter.ViewModels
 {
-    class UwpMain
+    class UwpMainModel
     {
         private Observable<int> _currentPage = new Observable<int>();
         private Observable<string> _currentDevice = new Observable<string>();

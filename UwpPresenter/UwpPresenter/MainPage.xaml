@@ -6,13 +6,17 @@
     xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
     xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
     mc:Ignorable="d"
-    DataContext="{Binding Source={StaticResource Locator}, Path=Main}">
+    DataContext="{Binding Source={StaticResource Locator}, Path=Main}"
+    >
 
     <RelativePanel>
-        <VariableSizedWrapGrid x:Name="InfoBlock" Orientation="Horizontal" Background="DeepPink">
-            <TextBlock x:Name="CurrentPage" Text="{Binding SelectedPage, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged}"/>
-
-        </VariableSizedWrapGrid>
+        <StackPanel x:Name="InfoBlock" Orientation="Horizontal" Background="DeepPink">
+            <TextBlock x:Name="CurrentPage" Text="{Binding SelectedPage, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged}" Margin="2"/>
+            <TextBlock x:Name="Device" Margin="2"/>
+            <TextBlock x:Name="AccelX" Margin="2"/>
+            <TextBlock x:Name="AccelY" Margin="2"/>
+            <TextBlock x:Name="AccelZ" Margin="2"/>
+        </StackPanel>
         <FlipView x:Name="flipView"
                       SelectedIndex="{Binding SelectedPage, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged}"
                 BorderBrush="Red" BorderThickness="5" RelativePanel.Below="InfoBlock">
@@ -25,7 +29,7 @@
         <VariableSizedWrapGrid x:Name="FunBlock" Orientation="Horizontal" Background="GreenYellow"
                                FlowDirection="RightToLeft"
                                RelativePanel.AlignRightWithPanel="True" RelativePanel.AlignTopWithPanel="True">
-            <TextBlock x:Name="CurrentDevice" Text="junk" VerticalAlignment="Top"/>
+            <TextBlock x:Name="CurrentDevice" Text="{Binding CurrentDevice, Mode=TwoWay, UpdateSourceTrigger=PropertyChanged}" VerticalAlignment="Top"/>
         </VariableSizedWrapGrid>
     </RelativePanel>
 </Page>

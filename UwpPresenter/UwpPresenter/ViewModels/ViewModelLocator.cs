@@ -9,9 +9,11 @@ namespace UwpPresenter.ViewModels
 {
     class ViewModelLocator : ViewModelLocatorBase
     {
+        //private UwpMainModel _uwpMain;
+
         public object Main
         {
-            get { return ViewModel(() => new UwpMain()); }
+            get { return ViewModel(() => new UwpMainModel()); }
         }
     }
 }
