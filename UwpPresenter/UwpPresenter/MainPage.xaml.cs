@@ -87,7 +87,7 @@ namespace UwpPresenter
 
             switch (device)
             {
-                case "Windows.Phone":
+                case "Windows.Mobile":
                     IsPhone = true;
                     break;
                 case "Windows.IoT":
@@ -132,7 +132,7 @@ namespace UwpPresenter
         {
             var appInstalledFolder = Windows.ApplicationModel.Package.Current.InstalledLocation;
             var assets = await appInstalledFolder.GetFolderAsync("Assets");
-            var folder = await assets.GetFolderAsync("IotHubTalk");
+            var folder = await assets.GetFolderAsync("UwpTalk");
             var files = await folder.GetFilesAsync();
 
             var imageList = new List<BitmapImage>();
