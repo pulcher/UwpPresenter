@@ -111,23 +111,6 @@
     <None Include="UwpPresenter_TemporaryKey.pfx" />
   </ItemGroup>
   <ItemGroup>
-    <Content Include="Assets\IotHubTalk\iotHubTalk-png.001.png" />
-    <Content Include="Assets\IotHubTalk\iotHubTalk-png.002.png" />
-    <Content Include="Assets\IotHubTalk\iotHubTalk-png.003.png" />
-    <Content Include="Assets\IotHubTalk\iotHubTalk-png.004.png" />
-    <Content Include="Assets\IotHubTalk\iotHubTalk-png.005.png" />
-    <Content Include="Assets\IotHubTalk\iotHubTalk-png.006.png" />
-    <Content Include="Assets\IotHubTalk\iotHubTalk-png.007.png" />
-    <Content Include="Assets\IotHubTalk\iotHubTalk-png.008.png" />
-    <Content Include="Assets\IotHubTalk\iotHubTalk-png.009.png" />
-    <Content Include="Assets\IotHubTalk\iotHubTalk-png.010.png" />
-    <Content Include="Assets\IotHubTalk\iotHubTalk-png.011.png" />
-    <Content Include="Assets\IotHubTalk\iotHubTalk-png.012.png" />
-    <Content Include="Assets\IotHubTalk\iotHubTalk-png.013.png" />
-    <Content Include="Assets\IotHubTalk\iotHubTalk-png.014.png" />
-    <Content Include="Assets\IotHubTalk\iotHubTalk-png.015.png" />
-    <Content Include="Assets\IotHubTalk\iotHubTalk-png.016.png" />
-    <Content Include="Assets\IotHubTalk\iotHubTalk-png.017.png" />
     <Content Include="Assets\UwpTalk\UwpTalk.001.jpeg" />
     <Content Include="Assets\UwpTalk\UwpTalk.002.jpeg" />
     <Content Include="Assets\UwpTalk\UwpTalk.003.jpeg" />

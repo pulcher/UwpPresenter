@@ -93,7 +93,7 @@ namespace UwpPresenter
                 case "Windows.IoT":
                     IsIot = true;
                     break;
-                case "Windows.XBox":
+                case "Windows.Xbox":
                     IsXbox = true;
                     break;
                 default:
